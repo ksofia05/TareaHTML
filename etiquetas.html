@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #6200ea;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p, ol, ul, dl {
+            font-size: 1.1em;
+            line-height: 1.5em;
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            display: block;
+            margin: 20px 0;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        canvas {
+            margin-top: 20px;
+        }
+
+        progress {
+            width: 100%;
+            height: 20px;
+            margin-top: 10px;
+        }
+
+        small {
+            font-size: 0.8em;
+            color: gray;
+        }
+
+        del {
+            color: red;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Etiqueta cite -->
+    <section>
+        <h2>Cita</h2>
+        <p><cite>Moonlight</cite> de Chase Atlantic.</p>
+    </section>
+
+    <!-- Etiqueta img -->
+    <section>
+        <h2>Imagen </h2>
+        <img src="https://lastfm.freetls.fastly.net/i/u/300x300/bb976c48e3195f44310c64042eda0e5c.jpg" alt="Imagen de Chase Atlantic">
+    </section>
+
+    <!-- Etiqueta iframe -->
+    <section>
+        <h2>Video YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vUNK5rIssww" 
+    title="YouTube video player">
+    </iframe>
+    </section>
+
+    <!-- Etiqueta ol -->
+    <section>
+        <h2>Lista ordenada - Miembros</h2>
+    <ol>
+        <li>Mitchel Cave</li>
+        <li>Christian Anthony</li>
+        <li>Clinton Cave</li>
+    </ol>
+    </section>
+
+    <!-- Etiqueta ul -->
+    <section>
+        <h2>Lista desordenada - Algunos Exitos</h2>
+    <ul>
+        <li>Heaven and Back</li>
+        <li>Into it</li>
+        <li>Meddle About</li>
+    </ul>
+    </section>
+
+    <!-- Etiqueta dd -->
+    <section>
+        <h2>Albums</h2>
+    <dl>
+        <!--Etiqueta span-->
+        <dt><span style="color: rgba(106, 0, 255, 0.552);">Paradise</span></dt>
+            <dd>Moonlight</dd>
+            <dd>Falling</dd>
+            <dd>Slow Down</dd>
+        <dt><span style="color:rgba(166, 0, 255, 0.611);"></style>Nostalgia</dt>
+            <dd>Roxanne</dd>
+            <dd>Friends</dd>
+            <dd>Vibes</dd>
+    </dl>
+    </section>
+
+    <!-- Etiqueta canvas -->
+    <section>
+        <h2>Canvas</h2>
+            <canvas id="myCanvas" width="400" height="200"></canvas>
+    
+                <script>
+                    var canvas = document.getElementById("myCanvas");
+                    var ctx = canvas.getContext("2d");
+
+                    // Fondo del canvas
+                    ctx.fillStyle = "#252525";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    // Estilo del texto
+                    ctx.font = "40px Arial";
+                    ctx.fillStyle = "#ffffff"; // Color blanco
+                    ctx.textAlign = "center";  // Centrar el texto
+                    ctx.textBaseline = "middle";  // Centrar verticalmente
+
+                    // Texto en el canvas
+                    ctx.fillText("Chase Atlantic", canvas.width / 2, canvas.height / 2);
+                </script>
+    </section>
+
+    <!-- Etiqueta data -->
+    <section>
+        <h2>Cumpleaños de los miembros</h2>
+        <p>Mitchel Cave nació el <data value="1996-12-02">2 de diciembre de 1996</data>.</p>
+        <p>Clinton Cave nació el <data value="1993-06-04">4 de julio de 1993</data>.</p>
+        <p>Christian Anthony nació el <data value="1993-09-03">3 de septiembre de 1993</data>.</p>
+    </section>
+
+    <section>
+        <h2>Entre Otras Etiquetas</h2>
+    <!-- Etiqueta del -->
+    <p>Este es un texto <del>eliminado</del>.</p>
+
+    <!-- Etiqueta q -->
+    <p>Me dijo: <q>Siempre sigue adelante</q>.</p>
+
+    <!-- Etiqueta script -->
+    <h2>Script</h2>
+    <script>
+        document.write("Este texto ha sido insertado por un script.");
+    </script>
+
+    <!-- Etiqueta small -->
+    <p>Este es un texto en <small>letra pequeña</small>.</p>
+
+    <!-- Etiqueta sub -->
+    <p>H<sub>2</sub>O es la fórmula del agua.</p>
+
+    <!-- Etiqueta progress -->
+    <h2>Progreso</h2>
+    <progress value="90" max="100">90%</progress>
+    </section>
+
+</body>
+</html>
